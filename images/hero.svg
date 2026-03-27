@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">CR7 poster</title>
+  <desc id="desc">A stylized local poster for Cristiano Ronaldo themed website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0c"/>
+      <stop offset="55%" stop-color="#1a1208"/>
+      <stop offset="100%" stop-color="#2d1f0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#f7cf71" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#f7cf71" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a77d2f"/>
+      <stop offset="100%" stop-color="#f7cf71"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+  <circle cx="1170" cy="320" r="330" fill="url(#glow)"/>
+  <g opacity="0.08" fill="#ffffff" font-family="Arial, sans-serif" font-weight="700">
+    <text x="90" y="360" font-size="420">7</text>
+    <text x="290" y="650" font-size="420">7</text>
+    <text x="500" y="940" font-size="420">7</text>
+  </g>
+  <g transform="translate(930 125)">
+    <path d="M78 65c72-6 128 56 125 132-1 34-17 67-44 89 28 17 52 49 61 85l38 145c10 37 25 72 45 104l58 97-119 62-39-72c-15-27-30-56-40-86l-29-90-24 119 51 193-135 29-39-216 20-194-52 108-129 197-113-75 157-244 91-196c15-35 45-62 82-78-35-22-57-61-56-103 2-83 60-139 132-146z" fill="#f1e5cf"/>
+    <path d="M148 120c42 0 75 35 74 78-1 42-34 75-76 75-42 0-76-34-76-77 0-42 35-76 78-76z" fill="#f1e5cf"/>
+    <path d="M114 76c8-28 65-35 96-5 7 7 13 18 16 30-47-10-89-9-112-1z" fill="#191919"/>
+    <path d="M33 975c120 17 273 20 441-24" stroke="url(#gold)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  </g>
+  <g fill="#f7cf71" font-family="Arial, sans-serif" font-weight="700">
+    <text x="110" y="160" font-size="54" letter-spacing="7">CRISTIANO RONALDO</text>
+    <text x="108" y="238" font-size="182" letter-spacing="10">LEGACY</text>
+    <text x="110" y="382" font-size="182" letter-spacing="10">IN MOTION</text>
+  </g>
+  <text x="113" y="484" fill="#d6cab7" font-family="Arial, sans-serif" font-size="34">
+    Power. Precision. Relentless standards.
+  </text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">CR7 portrait poster</title>
+  <desc id="desc">A local stylized portrait poster inspired by Cristiano Ronaldo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111"/>
+      <stop offset="100%" stop-color="#2a1a0e"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#f7cf71" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f7cf71" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <circle cx="490" cy="310" r="245" fill="url(#halo)"/>
+  <g transform="translate(180 120)">
+    <path d="M200 88c72 0 131 58 131 131 0 45-22 85-56 109 43 20 75 60 85 107l32 154-112 17-22-103-30 89 7 212-129-3 10-212-31-100-41 106-96-37 62-169c19-52 56-90 103-112-33-24-54-63-54-106 0-73 60-133 141-133z" fill="#efe3cc"/>
+    <circle cx="201" cy="110" r="74" fill="#efe3cc"/>
+    <path d="M129 100c15-51 119-65 164-4 7 10 12 20 14 36-47-15-119-18-178-4z" fill="#171717"/>
+  </g>
+  <text x="76" y="1010" fill="#f7cf71" font-family="Arial, sans-serif" font-size="190" font-weight="700">CR7</text>
+  <text x="84" y="1094" fill="#d6cab7" font-family="Arial, sans-serif" font-size="34" letter-spacing="6">DISCIPLINE BECAME ICONIC</text>
+</svg>
