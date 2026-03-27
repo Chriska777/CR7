@@ -246,7 +246,10 @@ section {
 
 .gallery-grid,
 .honors-grid,
-.timeline {
+.timeline,
+.photo-wall,
+.career-grid,
+.feature-stack {
   display: grid;
   gap: 18px;
 }
@@ -281,7 +284,10 @@ h2 {
 .quote-block,
 .photo-card,
 .honor-column,
-.credits {
+.credits,
+.wall-card,
+.career-card,
+.feature-card {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -318,6 +324,38 @@ h2 {
   grid-template-columns: 1.15fr 0.85fr;
 }
 
+.photo-wall {
+  grid-template-columns: 1.15fr 0.85fr 0.85fr;
+  grid-auto-rows: 220px;
+}
+
+.wall-card {
+  margin: 0;
+  overflow: hidden;
+}
+
+.wall-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.wall-card:hover img,
+.career-card:hover img,
+.feature-card:hover img {
+  transform: scale(1.03);
+}
+
+.wall-large {
+  grid-row: span 2;
+}
+
+.wall-wide {
+  grid-column: span 2;
+}
+
 .photo-card {
   margin: 0;
   overflow: hidden;
@@ -337,6 +375,48 @@ h2 {
 .photo-card figcaption {
   padding: 18px 20px 22px;
   color: var(--muted);
+}
+
+.career-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.career-card {
+  overflow: hidden;
+}
+
+.career-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.career-copy {
+  padding: 22px 24px 24px;
+}
+
+.career-tag,
+.feature-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--gold-hot);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+
+.career-copy h3,
+.feature-copy h3 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.career-copy p,
+.feature-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
 .stat-card {
@@ -457,6 +537,35 @@ h2 {
   line-height: 1.75;
 }
 
+.feature-stack {
+  gap: 22px;
+}
+
+.feature-card {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  overflow: hidden;
+}
+
+.feature-card.reverse {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-copy {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .moment-card {
   position: relative;
   min-height: 280px;
@@ -533,8 +642,22 @@ h2 {
   .stats-grid,
   .moments-list,
   .honors-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .career-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-wall {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wall-wide {
+    grid-column: span 2;
+  }
+
+  .feature-card,
+  .feature-card.reverse {
+    grid-template-columns: 1fr;
   }
 
   .timeline-item {
@@ -568,7 +691,9 @@ h2 {
   .stats-grid,
   .moments-list,
   .honors-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .career-grid,
+  .photo-wall {
     grid-template-columns: 1fr;
   }
 
@@ -583,6 +708,16 @@ h2 {
 
   .hero-visual {
     min-height: 420px;
+  }
+
+  .wall-large,
+  .wall-wide {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .feature-copy {
+    padding: 22px;
   }
 
   h1 {
