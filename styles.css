@@ -247,9 +247,9 @@ section {
 .gallery-grid,
 .honors-grid,
 .timeline,
-.photo-wall,
+.photo-editorial,
 .career-grid,
-.feature-stack {
+.feature-duo {
   display: grid;
   gap: 18px;
 }
@@ -287,7 +287,10 @@ h2 {
 .credits,
 .wall-card,
 .career-card,
-.feature-card {
+.feature-card,
+.quote-panel,
+.editorial-note,
+.editorial-main {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -324,11 +327,6 @@ h2 {
   grid-template-columns: 1.15fr 0.85fr;
 }
 
-.photo-wall {
-  grid-template-columns: 1.15fr 0.85fr 0.85fr;
-  grid-auto-rows: 220px;
-}
-
 .wall-card {
   margin: 0;
   overflow: hidden;
@@ -348,12 +346,57 @@ h2 {
   transform: scale(1.03);
 }
 
-.wall-large {
-  grid-row: span 2;
+.photo-editorial {
+  grid-template-columns: 1.3fr 0.8fr;
+  grid-template-areas:
+    "main side"
+    "main note";
+  align-items: stretch;
 }
 
-.wall-wide {
-  grid-column: span 2;
+.editorial-main {
+  grid-area: main;
+  overflow: hidden;
+  margin: 0;
+  min-height: 560px;
+}
+
+.editorial-main img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.editorial-side {
+  grid-area: side;
+  display: grid;
+  gap: 18px;
+}
+
+.offset-card {
+  transform: translateX(28px);
+}
+
+.editorial-note {
+  grid-area: note;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.note-kicker {
+  color: var(--gold-hot);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+.editorial-note p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
 .photo-card {
@@ -537,18 +580,15 @@ h2 {
   line-height: 1.75;
 }
 
-.feature-stack {
-  gap: 22px;
+.feature-duo {
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: stretch;
 }
 
 .feature-card {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   overflow: hidden;
-}
-
-.feature-card.reverse {
-  grid-template-columns: 1.05fr 0.95fr;
 }
 
 .feature-card img {
@@ -564,6 +604,20 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.quote-panel {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote-panel p {
+  margin: 10px 0 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 0.98;
 }
 
 .moment-card {
@@ -647,16 +701,20 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
 
-  .photo-wall {
-    grid-template-columns: 1fr 1fr;
+  .photo-editorial,
+  .feature-duo {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "side"
+      "note";
   }
 
-  .wall-wide {
-    grid-column: span 2;
+  .offset-card {
+    transform: none;
   }
 
-  .feature-card,
-  .feature-card.reverse {
+  .feature-card {
     grid-template-columns: 1fr;
   }
 
@@ -693,7 +751,8 @@ h2 {
   .honors-grid,
   .gallery-grid,
   .career-grid,
-  .photo-wall {
+  .photo-editorial,
+  .feature-duo {
     grid-template-columns: 1fr;
   }
 
@@ -710,10 +769,8 @@ h2 {
     min-height: 420px;
   }
 
-  .wall-large,
-  .wall-wide {
-    grid-row: auto;
-    grid-column: auto;
+  .editorial-main {
+    min-height: 420px;
   }
 
   .feature-copy {
